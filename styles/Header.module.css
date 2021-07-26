@@ -1,0 +1,38 @@
+.navLinks:hover {
+  color: #c11e8a;
+}
+.navbar {
+  background-color: #fff;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.link {
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+.contactBtn {
+  background: #ec1c24;
+  border: 0;
+  padding: 10px 32px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contactBtn:hover {
+  background-color: #fc6166;
+  color: #fff;
+}
+.link-container:hover {
+  color: #c11e8a;
+}
+.d-block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

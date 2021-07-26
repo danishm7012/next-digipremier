@@ -1,0 +1,48 @@
+.topBar {
+  background-color: #ec1c24;
+  color: white;
+  height: auto;
+  width: 100%;
+}
+.topBar a {
+  text-decoration: none;
+}
+.topBar p {
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+.topBar p i {
+  font-size: 1.3rem;
+}
+@media (max-height: 768px) {
+  .topBar {
+    display: none;
+  }
+}
+.topLink {
+  text-decoration: none;
+  color: rgb(238, 238, 238);
+}
+.topLink:hover {
+  color: rgb(255, 175, 175);
+}
+.topSocailLink {
+  float: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+  height: auto;
+  align-items: center;
+}
+
+.topSocailLink a {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: whitesmoke;
+  transition: 0.5s;
+}
+.topSocailLink a:hover {
+  background-color: whitesmoke;
+  color: #ec1c24;
+  border-radius: 50%;
+}
