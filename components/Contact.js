@@ -43,6 +43,8 @@ const Contact = () => {
   return (
     <section id='contact' className='contact'>
       <div className='container' data-aos='fade-up'>
+        <br />
+        <br />
         <div className='py-4 text-center'>
           <Form onSubmit={submitHandler}>
             <h1>GET IN TOUCH WITH US.</h1>
