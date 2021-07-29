@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import emailjs from "emailjs-com";
 
 const initialValues = {
   fname: "",
@@ -37,6 +38,28 @@ const validationSchema = Yup.object({
 });
 
 const GetQuoteForm = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    validationSchema,
+      emailjs
+        .sendForm(
+          "service_q5d390v",
+          "template_ud6b3hs",
+          e.target,
+          "user_eaJYOQc6AVB02gmLQCgyf"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            initialValues;
+            alert("Message Send Sucessfully");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+  }
   const formik = useFormik({
     initialValues,
     onSubmit,
@@ -55,7 +78,7 @@ const GetQuoteForm = () => {
           </p>
           <br />
           <br />
-          <form action="" onSubmit={formik.handleSubmit}>
+          <form action="" onSubmit={sendEmail}>
             <Row>
               <Col>
                 <Form.Group>
@@ -63,6 +86,7 @@ const GetQuoteForm = () => {
                     type="text"
                     placeholder="Full Name"
                     name="fname"
+                    required
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.fname}
@@ -81,6 +105,7 @@ const GetQuoteForm = () => {
                     type="email"
                     placeholder="Your Email"
                     name="email"
+                    required
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
@@ -99,6 +124,7 @@ const GetQuoteForm = () => {
                     type="text"
                     placeholder="Website URL"
                     name="weburl"
+                    required
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.weburl}
@@ -120,6 +146,7 @@ const GetQuoteForm = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.phone}
+                    required
                   />
                   {formik.touched.phone && formik.errors.phone ? (
                     <div className="error">{formik.errors.phone}</div>
@@ -135,6 +162,7 @@ const GetQuoteForm = () => {
                   rows="5"
                   placeholder="Additional Info"
                   className="form-control"
+                  required
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.message}

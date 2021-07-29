@@ -50,6 +50,9 @@ const About = () => {
           </Col>
         </Row>
       </Container>
+      <br />
+      <br />
+      <br />
     </div>
   )
 }

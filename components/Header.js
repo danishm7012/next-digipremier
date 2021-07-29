@@ -23,14 +23,15 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto text-center">
-              <Nav.Link href="/" className="links-nav">Home</Nav.Link>
+              <Nav.Link href="/" className="links-nav">
+                Home
+              </Nav.Link>
 
               <NavDropdown
                 className="links-nav"
                 style={{ marginRight: "0px", color: "#fff" }}
                 title="Digital Marketing"
                 id="collasible-nav-dropdown"
-                
               >
                 <NavDropdown.Item>
                   <Link href="/organic-seo-services">Organic SEO </Link>
@@ -195,11 +196,17 @@ const Header = () => {
 
               <Nav.Link className="links-nav"></Nav.Link>
 
-              <Nav.Link href="/testimonial" className="links-nav">Testimonial</Nav.Link>
+              <Nav.Link href="/testimonial" className="links-nav">
+                Testimonial
+              </Nav.Link>
 
-              <Nav.Link href="/team" className="links-nav">Team</Nav.Link>
+              <Nav.Link href="/team" className="links-nav">
+                Team
+              </Nav.Link>
 
-              <Nav.Link className="links-nav">News Updates</Nav.Link>
+              <Nav.Link href="/news" className="links-nav">
+                News Updates
+              </Nav.Link>
 
               <button className="btn btn-1" size="sm">
                 <Link href="/GetQuote">

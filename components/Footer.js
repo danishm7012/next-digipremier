@@ -129,7 +129,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link href="">
+                      <Link href="/about">
                         <a>
                           <FaAngleRight className="icon mr-2" />
                           <span className="ml-2"> About us</span>
@@ -147,7 +147,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link href="">
+                      <Link href="/news">
                         <a>
                           <FaAngleRight className="icon mr-2" />
                           <span className="ml-2">Blogs</span>

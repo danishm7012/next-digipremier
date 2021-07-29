@@ -708,3 +708,27 @@ body {
   color: #ed9321;
   font-size: 12px;
 }
+
+.blogs-section h2 {
+  color: #e18c1f;
+  font-size: 45px;
+  font-weight: 700;
+}
+.blogs-section h3 {
+  color: #007fb1;
+}
+.blogs-section p {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.blogs-section p strong {
+  color: #e18c1f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.blogs-section p strong a {
+  text-decoration: none;
+}
