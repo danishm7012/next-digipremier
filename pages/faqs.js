@@ -1,11 +1,11 @@
 import FAQData from '../companiesData/FAQ'
 import { Col, Row, Container } from 'react-bootstrap'
 import Link from 'next/link'
-// import Title from '../components/proServiceDetail/Title'
+import Title from '../components/proServiceDetail/Title'
 const FAQ = () => {
   return (
     <>
-      {/* <Title img='/images/Banners/FAqs.jpg' /> */}
+      <Title heading="Frequently Ask Questions" />
 
       <div className='section'>
         <div className='section-title pt-2'>

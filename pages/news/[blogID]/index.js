@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { Col, Row, Container, Image, Button } from "react-bootstrap";
-// import blogs from '../../../companiesData/BlogsData'
-import { Blogs } from "../../../companydata/blogs";
+import blogs from "../../../companiesData/BlogsData";
+// import { Blogs } from "../../../companydata/blogs";
 import Link from "next/link";
 import Meta from "../../../components/Meta";
 
@@ -11,7 +11,7 @@ const index = () => {
   const { blogID } = router.query;
   const [Blog, setBlog] = useState({});
   useEffect(() => {
-    setBlog(blogs.find((b) => b._id === blogID));
+    setBlog(blogs.find((b) => b.slug === blogID));
   }, [blogID]);
   return (
     <div className="section">
@@ -24,33 +24,31 @@ const index = () => {
         <Row>
           <Col>
             <Link href={`/news`}>
-              <Button
-                variant="outline-dark"
-                size="sm"
-                style={{ fontSize: 14, float: "left", marginTop: "0.7rem" }}
-              >
+              <button className="btn btn-1">
                 <i class="fas fa-caret-left"></i> Back
-              </Button>
+              </button>
             </Link>
           </Col>
         </Row>
-        <Row>
-          <Col className="text-center py-2">
-            <h1>{Blog.title}</h1>
-            <strong>
-              <p style={{ color: "#c11e8a" }}>
-                {Blog.auther} | {Blog.date}
-              </p>
-            </strong>
-            <p className="text-left p-2">{Blog.detail}</p>
-          </Col>
-        </Row>
+        <br />
         <Row>
           <Image
             style={{ height: "90vh", width: "100%" }}
             src={Blog.image}
             alt={Blog.title}
           />
+        </Row>
+        <br />
+        <Row>
+          <Col className=" py-2">
+            <h1>{Blog.title}</h1>
+            <strong>
+              <p style={{ color: "#c11e8a" }}>
+                {Blog.auther} | {Blog.date}
+              </p>
+            </strong>
+            <p className="text-justify text-white p-2">{Blog.details}</p>
+          </Col>
         </Row>
       </Container>
     </div>

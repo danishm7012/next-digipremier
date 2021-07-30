@@ -5,7 +5,7 @@ import Title from '../components/proServiceDetail/Title'
 const contact = () => {
   return (
     <>
-      <Title img='/images/Banners/Contact-Us.jpg' />
+      <Title heading="Contact US" />
       <Meta title='contact' />
       <Contact />
     </>

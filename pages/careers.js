@@ -1,53 +1,53 @@
-import React, { useState } from 'react'
-import Title from '../components/proServiceDetail/Title'
-
-import { Container, Row, Form, Button, Col } from 'react-bootstrap'
-import Meta from '../components/Meta'
+import React, { useState } from "react";
+import Title from "../components/proServiceDetail/Title";
+import axios from "axios";
+import { Container, Row, Form, Button, Col } from "react-bootstrap";
+import Meta from "../components/Meta";
 
 const Career = () => {
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [job, setJob] = useState('')
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [job, setJob] = useState("");
 
-  const [success, setSuccess] = useState('')
-  const [errors, setErrors] = useState({})
+  const [success, setSuccess] = useState("");
+  const [errors, setErrors] = useState({});
   const submitHandler = (event) => {
-    event.preventDefault()
-    alert('submitted!')
-    /* 
-    let careerData = { name, email, phone, job }
+    event.preventDefault();
+
+    let careerData = { name, email, phone, job };
     const config = {
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-    }
+    };
 
     axios
-      .post('/api/career/add', careerData, config)
+      .post("https://digipremier.org/api/career/add", careerData, config)
       .then((res) => {
-        setErrors({})
-        setSuccess(res.data.success)
+        setErrors({});
+        alert("submitted!");
+        setSuccess(res.data.success);
       })
       .catch((err) => {
-        setSuccess(false)
-        setErrors(err.response.data)
-      }) */
-  }
+        setSuccess(false);
+        setErrors(err.response.data);
+      });
+  };
 
   return (
     <>
-      <Title img='/images/Banners/cAREER.jpg' />
+      <Title img="/images/banners/hero.jpg" heading="Careers" />
 
-      <div className='mt-5'>
+      <div className="py-5" style={{ background: "#222222" }}>
         <Meta
-          title='Careers - ProGcc'
-          description='Being a part of the ProGcc'
+          title="Careers - ProGcc"
+          description="Being a part of the ProGcc"
         />
         <div>
-          <Container>
+          <Container className="careers-section">
             <Row>
-              <Col className='left-block' sm={6}>
+              <Col className="left-block" sm={6}>
                 <h2>Overview</h2>
                 <p>
                   We, at ProGcc create opportunities for our employees to grow
@@ -66,91 +66,93 @@ const Career = () => {
                   objectives.
                 </p>
               </Col>
-              <Col className='right-block' sm={6}>
+              <Col className="right-block" sm={6}>
                 <h3>Get in touch with us</h3>
                 <Form onSubmit={submitHandler}>
                   <Form.Row>
-                    <Form.Group as={Col} md='10' controlId='validationFormik01'>
+                    <Form.Group as={Col} md="10" controlId="validationFormik01">
                       <Form.Label>Your Name</Form.Label>
                       <Form.Control
-                        type='text'
-                        name='Name'
+                        type="text"
+                        name="Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         isInvalid={errors.name}
                       />
-                      <Form.Control.Feedback type='invalid'>
+                      <Form.Control.Feedback type="invalid">
                         {errors.name}
                       </Form.Control.Feedback>
                     </Form.Group>
-                    <Form.Group as={Col} md='10' controlId='validationFormik02'>
+                    <Form.Group as={Col} md="10" controlId="validationFormik02">
                       <Form.Label>Email</Form.Label>
                       <Form.Control
-                        type='text'
-                        name='Email'
+                        type="text"
+                        name="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         isInvalid={errors.email}
                       />
 
-                      <Form.Control.Feedback type='invalid'>
+                      <Form.Control.Feedback type="invalid">
                         {errors.email}
                       </Form.Control.Feedback>
                     </Form.Group>
                   </Form.Row>
                   <Form.Row>
-                    <Form.Group as={Col} md='10' controlId='validationFormik03'>
+                    <Form.Group as={Col} md="10" controlId="validationFormik03">
                       <Form.Label>Contact Number</Form.Label>
                       <Form.Control
-                        type='text'
-                        name='phone'
+                        type="text"
+                        name="phone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.phone)}
                         isInvalid={errors.phone}
                       />
 
-                      <Form.Control.Feedback type='invalid'>
+                      <Form.Control.Feedback type="invalid">
                         {errors.phone}
                       </Form.Control.Feedback>
                     </Form.Group>
-                    <Form.Group as={Col} md='10' controlId='validationFormik04'>
+                    <Form.Group as={Col} md="10" controlId="validationFormik04">
                       <Form.Label>Job Nature</Form.Label>
                       <Form.Control
-                        type='text'
-                        name='job'
+                        type="text"
+                        name="job"
                         value={job}
                         onChange={(e) => setJob(e.target.job)}
                         isInvalid={errors.job}
                       />
-                      <Form.Control.Feedback type='invalid'>
+                      <Form.Control.Feedback type="invalid">
                         {errors.job}
                       </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group>
+                      <Form.Label>Upload CV</Form.Label>
                       <Form.File
-                        className='position-relative my-3'
-                        name='file'
-                        label='CV Upload'
+                        className="position-relative my-3"
+                        name="file"
                         isInvalid={!!errors.file}
                         feedback={errors.file}
-                        id='validationFormik107'
+                        id="validationFormik107"
                       />
                     </Form.Group>
                   </Form.Row>
 
-                  {success && <Message variant='success'>{success}</Message>}
+                  {success && <Message variant="success">{success}</Message>}
 
-                  <Button className='contact-btn' type='submit'>
+                  <button className="btn btn-1" type="submit">
                     Submit
-                  </Button>
+                  </button>
                 </Form>
               </Col>
             </Row>
           </Container>
+          <br />
+          <br />
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Career
+export default Career;

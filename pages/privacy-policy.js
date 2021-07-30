@@ -1,9 +1,9 @@
-// import Title from '../components/proServiceDetail/Title'
+import Title from '../components/proServiceDetail/Title'
 
 const privacyPolicy = () => {
   return (
     <>
-      {/* <Title img='/images/Banners/Privacy-Policy.jpg' /> */}
+      <Title img='/images/banners/Privacy-Policy.jpg ' heading="Privacy Policy" />
       <div className="section">
         <div className=" container">
           <div className="section-title">

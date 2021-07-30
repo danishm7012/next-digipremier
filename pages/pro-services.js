@@ -5,7 +5,7 @@ import { server } from '../config/index'
 const proServices = ({ services }) => {
   return (
     <>
-      <Title img='/images/Banners/pro.jpg' />
+      <Title img='/images/banners/pro.jpg' heading="Pro Services" />
       <Meta title='proServices' />
       <Pro services={services} />
     </>

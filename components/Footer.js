@@ -7,6 +7,7 @@ import { faPhone, faChevronRight } from "@fortawesome/free-solid-svg-icons"; // 
 import { FaAngleRight } from "react-icons/fa";
 import Newsletter from "./newsletter";
 import Link from "next/link";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import {
   faWhatsapp,
@@ -18,36 +19,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"; // import the icons you needz
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState({});
-
-  const [validated, setValidated] = useState(false);
-
-  const submitHandler = (event) => {
-    alert("Submitted Successfully!");
-    /* const form = event.currentTarget
-    if (form.checkValidity() === false) {
-      event.preventDefault()
-      event.stopPropagation()
-    }
-
-    setValidated(true)
-
-    let contactData = { email }
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-
-    axios
-      .post('/api/news/add', contactData, config)
-      .then((res) => {
-        alert('Submitted Successfully!')
-      })
-      .catch((err) => setErrors(err.response.data)) */
-  };
-
   return (
     <>
       <footer id="footer">
@@ -138,7 +109,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link href="">
+                      <Link href="/careers">
                         <a>
                           <FaAngleRight className="icon mr-2" />
                           <span className="ml-2"> Career</span>
@@ -265,7 +236,7 @@ const Footer = () => {
           </div>
         }
       </footer>
-
+      <MessengerCustomerChat pageId="<PAGE_ID>" appId="<APP_ID>" />
       <SidebarSocial />
     </>
   );

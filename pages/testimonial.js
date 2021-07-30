@@ -1,13 +1,13 @@
-// import Title from '../components/proServiceDetail/Title'
+import Title from "../components/proServiceDetail/Title";
 
 const testimonial = () => {
   return (
     <>
-      {/* <Title img='/images/Banners/Testimonial-Page.jpg' /> */}
+      <Title img="/images/banners/Testimonial-Page.jpg" heading="Testimonial" />
 
       <h1>Comming Soon...</h1>
     </>
-  )
-}
+  );
+};
 
-export default testimonial
+export default testimonial;

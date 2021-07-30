@@ -1,9 +1,9 @@
-// import Title from '../components/proServiceDetail/Title'
+import Title from '../components/proServiceDetail/Title'
 
 const TermnCondition = () => {
   return (
     <>
-      {/* <Title img='/images/Banners/Term-&-Conditions.jpg' /> */}
+      <Title img='/images/banners/Term-&-Conditions.jpg' heading="Terms & Conditions" />
       <div className="section">
         <div className=" container">
           <div className="section-title">

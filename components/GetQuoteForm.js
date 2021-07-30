@@ -1,71 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import emailjs from "emailjs-com";
-
-const initialValues = {
-  fname: "",
-  email: "",
-  phone: "",
-  weburl: "",
-  message: "",
-};
-const onSubmit = (values, submitProps) => {
-  console.log("Form data", values);
-  toast.success("Message Submit Sucessfully", {
-    position: "top-center",
-  });
-  submitProps.setSubmitting(false);
-  submitProps.resetForm();
-};
-
-const validationSchema = Yup.object({
-  fname: Yup.string()
-    .min(3, "Name must be three or more characters")
-    .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field ")
-    .required("Name is required"),
-  email: Yup.string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  phone: Yup.string()
-    .matches(/^[0-9\s]+$/, "Only number are allowed for this field ")
-    .required("Phone Number is required"),
-  weburl: Yup.string().required("Website URL is required"),
-  message: Yup.string().required("Message is required"),
-});
+import axios from "axios";
 
 const GetQuoteForm = () => {
-  function sendEmail(e) {
-    e.preventDefault();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [weburl, setWeburl] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
 
-    validationSchema,
-      emailjs
-        .sendForm(
-          "service_q5d390v",
-          "template_ud6b3hs",
-          e.target,
-          "user_eaJYOQc6AVB02gmLQCgyf"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            initialValues;
-            alert("Message Send Sucessfully");
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-  }
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    // validate,
-    validationSchema,
-  });
+  const [success, setSuccess] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    let contactData = { name, email, weburl, phone, message };
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    axios
+      .post("https://digipremier.org/api/quote/add", contactData, config)
+      .then((res) => {
+        setErrors({});
+        alert(res.data.success);
+        setSuccess(res.data.success);
+      })
+      .catch((err) => {
+        setSuccess(false);
+        setErrors(err.response.data);
+      });
+  };
+
   return (
     <div>
       <div className="get-quote-form">
@@ -78,41 +48,30 @@ const GetQuoteForm = () => {
           </p>
           <br />
           <br />
-          <form action="" onSubmit={sendEmail}>
+          <form action="" onSubmit={submitHandler}>
             <Row>
               <Col>
                 <Form.Group>
                   <Form.Control
                     type="text"
                     placeholder="Full Name"
-                    name="fname"
-                    required
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.fname}
+                    value={name}
+                    isInvalid={errors.name}
+                    onChange={(e) => setName(e.target.value)}
                   />
-                  {formik.touched.name && formik.errors.name ? (
-                    <div className="error">{formik.errors.name}</div>
-                  ) : null}
+                  <div className="error">{errors.name}</div>
                 </Form.Group>
-                {formik.touched.fname && formik.errors.fname ? (
-                  <div className="error">{formik.errors.fname}</div>
-                ) : null}
               </Col>
               <Col>
                 <Form.Group>
                   <Form.Control
                     type="email"
                     placeholder="Your Email"
-                    name="email"
-                    required
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.email}
+                    value={email}
+                    isInvalid={errors.email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-                  {formik.touched.email && formik.errors.email ? (
-                    <div className="error">{formik.errors.email}</div>
-                  ) : null}
+                  <div className="error">{errors.email}</div>
                 </Form.Group>
               </Col>
             </Row>
@@ -123,15 +82,11 @@ const GetQuoteForm = () => {
                   <Form.Control
                     type="text"
                     placeholder="Website URL"
-                    name="weburl"
-                    required
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.weburl}
+                    value={weburl}
+                    isInvalid={errors.weburl}
+                    onChange={(e) => setWeburl(e.target.value)}
                   />
-                  {formik.touched.weburl && formik.errors.weburl ? (
-                    <div className="error">{formik.errors.weburl}</div>
-                  ) : null}
+                  <div className="error">{errors.weburl}</div>
                 </Form.Group>
               </Col>
             </Row>
@@ -142,15 +97,11 @@ const GetQuoteForm = () => {
                   <Form.Control
                     type="text"
                     placeholder="Contact No"
-                    name="phone"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.phone}
-                    required
+                    value={phone}
+                    isInvalid={errors.phone}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
-                  {formik.touched.phone && formik.errors.phone ? (
-                    <div className="error">{formik.errors.phone}</div>
-                  ) : null}
+                  <div className="error">{errors.phone}</div>
                 </Form.Group>
               </Col>
             </Row>
@@ -158,18 +109,14 @@ const GetQuoteForm = () => {
             <Row>
               <Col>
                 <textarea
-                  name="message"
                   rows="5"
                   placeholder="Additional Info"
                   className="form-control"
-                  required
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.message}
+                  value={message}
+                  isInvalid={errors.message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
-                {formik.touched.message && formik.errors.message ? (
-                  <div className="error">{formik.errors.message}</div>
-                ) : null}
+                <div className="error">{errors.message}</div>
               </Col>
             </Row>
             <br />
