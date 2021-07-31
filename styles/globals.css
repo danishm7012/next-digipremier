@@ -606,7 +606,7 @@ body {
 /* Logo Slider */
 .logo-slider {
   height: 250px;
-  background: rgba(255, 255, 255, 0.3);
+  background: #151515;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -771,4 +771,82 @@ body {
   border: none;
   border-bottom: 1px solid #f5f5f5;
   margin-bottom: 5px;
+}
+
+/* testimonials */
+
+.testimonial-page h2 {
+  color: #e18c1f;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.testimonial-page hr {
+  border: 2px solid #007fb1;
+  border-radius: 5px;
+}
+.testimonial-page p {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.testimonial-card {
+  padding: 1rem;
+  border-radius: 10px;
+  background: #151515;
+  position: relative;
+}
+.testimonial-card p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.testimonial-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.testimonial-card .qutoes {
+  position: absolute;
+  top: -3%;
+}
+.testimonial-card .qutoes .icons {
+  color: #e18c1f;
+  font-size: 30px;
+}
+
+.testimonail-name span {
+  color: #007fb1;
+}
+.team-card {
+  padding: 1rem;
+}
+.team-card h2 {
+  color: #e18c1f;
+  font-size: 25px;
+  margin-top: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.team-card .text .desigination {
+  color: #007fb1;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.team-card .text p {
+  color: #fff;
+}
+.team-card .social-links li {
+  display: inline-block;
+  margin: 10px 1rem;
+}
+.team-card .social-links li a {
+  color: #e18c1f;
+  font-size: 18px;
 }

@@ -1,35 +1,31 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-
+import TeamCard from "./teamCard";
+import { TeamData } from "../../companiesData/TeamData";
 const OurTeam = () => {
   return (
     <div id="team" className="section text-center ">
-      <h1>OUR TEAM</h1>
+      <h1 style={{ fontSize: "35px", fontWeight: "700", letterSpacing: "1px" }}>
+        OUR TEAM
+      </h1>
+      <p className="text-center text-white">
+        With over 100 Years of Combined Experince, We've got a well seasoned
+        team at the helm
+      </p>
+      <br />
       <Container>
         <Row>
-          <Col lg={3} md={3} sm={3}>
-            <Card className="team-card">
-              <Card.Img src="/images/teams/1.png"></Card.Img>
-              <Card.Title>SEO Expert</Card.Title>
-            </Card>
-          </Col>
-          <Col lg={3} md={3} sm={3}>
-            <Card className="team-card">
-              <Card.Img src="/images/teams/2.png"></Card.Img>
-              <Card.Title>SMM Specialist</Card.Title>
-            </Card>
-          </Col>
-          <Col lg={3} md={3} sm={3}>
-            <Card className="team-card">
-              <Card.Img src="/images/teams/4.png"></Card.Img>
-              <Card.Title>Project Manager</Card.Title>
-            </Card>
-          </Col>
-          <Col lg={3} md={3} sm={3}>
-            <Card className="team-card">
-              <Card.Img src="/images/teams/3.png"></Card.Img>
-              <Card.Title>PPC Expert</Card.Title>
-            </Card>
-          </Col>
+          {TeamData.map((Data) => {
+            return (
+              <Col md={4} sm={6} xs={12}>
+                <TeamCard
+                  img={Data.img}
+                  Name={Data.Name}
+                  desig={Data.desig}
+                  details={Data.details}
+                />
+              </Col>
+            );
+          })}
         </Row>
       </Container>
       <br />

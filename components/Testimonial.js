@@ -2,16 +2,40 @@ import React from "react";
 import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
+import TestimonialCard from "./testimonials/testimonialCard/index";
+import { TestimonialData } from "../companiesData/TestimonialData";
 
 const Testimonial = () => {
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
   };
   return (
     <div className="py-5 testimonials" style={{ background: "#000" }}>
@@ -22,48 +46,22 @@ const Testimonial = () => {
           <h2 className="text-center">Testimonials</h2>
         </div>
         <br />
-        <Row>
-          <Col></Col>
-          <Col md={7} xs={12}>
-            <Slider {...settings}>
-              <div>
-                <div className="text-center">
-                  <FaQuoteRight className="icon" />
-                  <br />
-                  <p>
-                    I was very sceptical about SEO services in advanced of being
-                    introduced to Matt, but whatever it is Matt does, works like
-                    magic!
-                  </p>
 
-                  <FaQuoteLeft className="icon" />
-                  <br />
-                  <span>
-                    <strong>Brilliant Highly recomended</strong>
-                  </span>
-                </div>
+        <Slider {...settings}>
+          {TestimonialData.map((Data) => {
+            return (
+              <div className="p-2">
+                <TestimonialCard
+                  img={Data.img}
+                  details={Data.details}
+                  Name={Data.Name}
+                  desig={Data.desig}
+                  company={Data.company}
+                />
               </div>
-              <div>
-                <div className="text-center">
-                  <FaQuoteRight className="icon" />
-                  <br />
-                  <p>
-                    I was very sceptical about SEO services in advanced of being
-                    introduced to Matt, but whatever it is Matt does, works like
-                    magic!
-                  </p>
-
-                  <FaQuoteLeft className="icon" />
-                  <br />
-                  <span>
-                    <strong>Brilliant Highly recomended</strong>
-                  </span>
-                </div>
-              </div>
-            </Slider>
-          </Col>
-          <Col></Col>
-        </Row>
+            );
+          })}
+        </Slider>
       </Container>
       <br />
       <br />

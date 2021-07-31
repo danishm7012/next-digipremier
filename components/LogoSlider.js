@@ -14,7 +14,7 @@ const LogoSlider = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
 
     responsive: [
       {

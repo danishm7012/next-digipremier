@@ -13,7 +13,7 @@ export default function Home({ services }) {
       <Hero />
 
       <About />
-      <Services serviceData={services} />
+      {/* <Services serviceData={services} /> */}
       <Contact />
       <Testimonial />
       <LogoSlider />
@@ -22,13 +22,13 @@ export default function Home({ services }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch(`http://digipremier.herokuapp.com/api/service/all`);
-  const services = await res.json();
+// export const getStaticProps = async () => {
+//   const res = await fetch(`https://digipremier.herokuapp.com/api/service/all`);
+//   const services = await res.json();
 
-  return {
-    props: {
-      services,
-    },
-  };
-};
+//   return {
+//     props: {
+//       services,
+//     },
+//   };
+// };
