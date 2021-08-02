@@ -1,11 +1,11 @@
 import Meta from '../components/Meta'
 import Pro from '../components/Pro'
-import Title from '../components/proServiceDetail/Title'
+import Title from '../components/proServiceDetail/title'
 import { server } from '../config/index'
 const proServices = ({ services }) => {
   return (
     <>
-      <Title img='/images/banners/pro.jpg' heading="Pro Services" />
+      <Title img='/images/banners/pro.jpg' heading='Pro Services' />
       <Meta title='proServices' />
       <Pro services={services} />
     </>
