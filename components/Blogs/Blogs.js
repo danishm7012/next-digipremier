@@ -2,7 +2,7 @@ import Meta from '../Meta'
 
 import { Container } from 'react-bootstrap'
 /* import BlogData from '../../companiesData/BlogsData' */
-import Title from '../proServiceDetail/Title'
+import Title from '../common/Title'
 import Blog from './Blog'
 const Blogs = ({ blogs }) => {
   return (
@@ -11,7 +11,6 @@ const Blogs = ({ blogs }) => {
       <div className='mt-3 section'>
         <Meta title='Blogs - ProGcc' />
         <div className='section-title container'>
-          {console.log(blogs)}
           <h2>Our Blogs</h2>
           <p>
             You can get started with your business in UAE, especially in the

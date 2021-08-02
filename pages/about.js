@@ -1,6 +1,6 @@
 import Meta from '../components/Meta'
 import About from '../components/About'
-import Title from '../components/proServiceDetail/Title'
+import Title from '../components/common/Title'
 
 const about = () => {
   return (

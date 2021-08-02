@@ -1,7 +1,7 @@
 /* import FAQData from '../companiesData/FAQ'
 import { Col, Row, Container } from 'react-bootstrap'
 import Link from 'next/link' */
-import Title from '../components/proServiceDetail/Title'
+import Title from '../components/common/Title'
 const FAQ = () => {
   return (
     <>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Title from '../components/proServiceDetail/Title'
+import Title from '../components/common/Title'
 import axios from 'axios'
 import { Container, Row, Form, Button, Col } from 'react-bootstrap'
 import Meta from '../components/Meta'
