@@ -1,6 +1,6 @@
-import FAQData from '../companiesData/FAQ'
+/* import FAQData from '../companiesData/FAQ'
 import { Col, Row, Container } from 'react-bootstrap'
-import Link from 'next/link'
+import Link from 'next/link' */
 import Title from '../components/proServiceDetail/Title'
 const FAQ = () => {
   return (
@@ -11,7 +11,7 @@ const FAQ = () => {
         <div className='section-title pt-2'>
           <h2>Frequently Ask Quesions</h2>
         </div>
-        <Container>
+        {/* <Container>
           {FAQData.map((ques) => (
             <Row key={ques.Q}>
               <Col>
@@ -30,7 +30,7 @@ const FAQ = () => {
               </Col>
             </Row>
           ))}
-        </Container>
+        </Container> */}
       </div>
     </>
   )
