@@ -1,6 +1,6 @@
 import Meta from '../components/Meta'
 import Pro from '../components/Pro'
-import Title from '../components/proServiceDetail/title'
+import Title from '../components/proServiceDetail/Title'
 import { server } from '../config/index'
 const proServices = ({ services }) => {
   return (
