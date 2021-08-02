@@ -4,7 +4,7 @@ import Meta from '../../components/Meta'
 import MarkdownIt from 'markdown-it'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { useRouter } from 'next/router'
-import ServiceImgs from '../../companydata/servicesImg'
+import ServicesImg from '../../companydata/servicesImg'
 
 const md = new MarkdownIt()
 
@@ -14,7 +14,7 @@ const Service = ({ service }) => {
   const [ServiceImg, setServiceImg] = useState({})
 
   useEffect(() => {
-    setServiceImg(ServiceImgs.find((s) => s.slug === slug))
+    setServiceImg(ServicesImg.find((s) => s.slug === slug))
   }, [slug])
 
   return (
@@ -45,10 +45,12 @@ const Service = ({ service }) => {
               <a className='btn-1'>Go Back</a>
             </Link>
           </div>
-          <div
-            className='service-content container'
-            dangerouslySetInnerHTML={{ __html: md.render(service.detail) }}
-          ></div>
+          {service.detail && (
+            <div
+              className='service-content container'
+              dangerouslySetInnerHTML={{ __html: md.render(service.detail) }}
+            ></div>
+          )}
           <br />
         </Container>
       </div>
