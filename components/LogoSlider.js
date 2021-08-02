@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react'
 // import Logo2 from "/images/logos/adam_property.png";
-import { LogoSliderData } from "../data/logoSliderData";
-import Slider from "react-slick";
-import { Container, Row, Col } from "react-bootstrap";
-import Image from "next/image";
+import { LogoSliderData } from '../data/logoSliderData'
+import Slider from 'react-slick'
+import { Container, Row, Col } from 'react-bootstrap'
+import Image from 'next/image'
 
 const LogoSlider = () => {
-  console.log("Logos", LogoSliderData);
   var settings = {
     dots: true,
     infinite: true,
@@ -44,20 +43,20 @@ const LogoSlider = () => {
       // settings: "unslick"
       // instead of a settings object
     ],
-  };
+  }
 
   return (
-    <div style={{ background: "#000" }}>
+    <div style={{ background: '#000' }}>
       <Container>
         <Slider {...settings}>
           {LogoSliderData.map((Data) => {
             return (
-              <div className="p-2">
-                <div className="logo-slider">
-                  <Image src={Data.img} width={250} height={300} alt="Logo 1" />
+              <div className='p-2'>
+                <div className='logo-slider'>
+                  <Image src={Data.img} width={250} height={300} alt='Logo 1' />
                 </div>
               </div>
-            );
+            )
           })}
         </Slider>
       </Container>
@@ -65,7 +64,7 @@ const LogoSlider = () => {
       <br />
       <br />
     </div>
-  );
-};
+  )
+}
 
-export default LogoSlider;
+export default LogoSlider

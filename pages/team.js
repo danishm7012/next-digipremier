@@ -1,10 +1,14 @@
 import Team from '../components/team/team'
-import Title from '../components/proServiceDetail/Title'
-
+import { Image } from 'react-bootstrap'
 const team = () => {
   return (
     <>
-      <Title img='/images/banners/Teams.jpg' heading="Team" />
+      <Image
+        src='/images/About-Us.jpg'
+        height='auto'
+        width='100%'
+        alt='about our team'
+      />
 
       <Team />
     </>

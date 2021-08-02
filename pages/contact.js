@@ -1,11 +1,16 @@
 import Meta from '../components/Meta'
 import Contact from '../components/Contact'
-import Title from '../components/proServiceDetail/Title'
+import { Image } from 'react-bootstrap'
 
 const contact = () => {
   return (
     <>
-      <Title heading="Contact US" />
+      <Image
+        src='/images/Contact-us.jpg'
+        height='auto'
+        width='100%'
+        alt='Contact-us'
+      />
       <Meta title='contact' />
       <Contact />
     </>

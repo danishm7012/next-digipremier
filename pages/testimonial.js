@@ -1,14 +1,18 @@
-import Title from "../components/proServiceDetail/Title";
-import TestimonialPage from "../components/testimonials";
+import { Image } from 'react-bootstrap'
+import TestimonialPage from '../components/testimonials'
 
 const testimonial = () => {
   return (
     <>
-      <Title img="/images/banners/Testimonial-Page.jpg" heading="Testimonial" />
-
+      <Image
+        src='/images/testimonial.jpg'
+        height='auto'
+        width='100%'
+        alt='testimonial'
+      />
       <TestimonialPage />
     </>
-  );
-};
+  )
+}
 
-export default testimonial;
+export default testimonial
