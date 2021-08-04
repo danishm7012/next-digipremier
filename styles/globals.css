@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800;900&display=swap');
 
 body {
-  font-family: "Nunito Sans", sans-serif !important;
+  font-family: 'Nunito Sans', sans-serif !important;
 }
 /* .section-title {
   /* text-align: center;
@@ -17,6 +17,38 @@ body {
   color: #0098ed;
 }
 
+.package-row {
+  margin: 0.3rem;
+  padding: 0.5rem;
+}
+.package-image {
+  margin: 0.3rem;
+  padding: 0.5rem;
+}
+.pakage-detail h2 {
+  color: #e18c1f;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 0.5rem;
+}
+.package-content p {
+  color: #0098ed;
+}
+.package-content li {
+}
+.package-content ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.package-content ul li::before {
+  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #0098ed; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
 .section {
   background-color: #151515;
   height: auto;
@@ -382,7 +414,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #fff;
 }
 
@@ -470,13 +502,13 @@ body {
   background-color: rgb(15, 15, 15);
 }
 
-#footer .footer-top .footer-newsletter form input[type="email"] {
+#footer .footer-top .footer-newsletter form input[type='email'] {
   border: 0;
   padding: 4px;
   width: calc(100% - 110px);
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"] {
+#footer .footer-top .footer-newsletter form input[type='submit'] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -491,7 +523,7 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
+#footer .footer-top .footer-newsletter form input[type='submit']:hover {
   background: #ed9321;
 }
 .copy-write {
@@ -641,7 +673,7 @@ body {
   color: #fff !important;
 }
 .services-card .card-title {
-  font-family: "Nunito Sans", sans-serif !important;
+  font-family: 'Nunito Sans', sans-serif !important;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -736,7 +768,7 @@ body {
 .hero-title {
   width: 100%;
   height: 300px;
-  background: url("../public/images/banners/Content-Marketing.jpg") no-repeat
+  background: url('../public/images/banners/Content-Marketing.jpg') no-repeat
     center;
   background-size: cover;
 }

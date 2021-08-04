@@ -200,7 +200,9 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link className='links-nav'></Nav.Link>
+              <Nav.Link href='/packages' className='links-nav'>
+                Packages
+              </Nav.Link>
 
               <Nav.Link href='/testimonial' className='links-nav'>
                 Testimonial
