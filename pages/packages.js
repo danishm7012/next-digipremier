@@ -8,7 +8,7 @@ const packages = ({ packages }) => {
   )
 }
 export const getStaticProps = async () => {
-  const res = await fetch(`http://cms-digipremier.herokuapp.com/packages`)
+  const res = await fetch(`http://cms-digipremier.herokuapp.com/packages/`)
 
   const packages = await res.json()
 

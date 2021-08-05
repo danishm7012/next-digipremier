@@ -43,7 +43,7 @@ const Footer = () => {
                     </p>
                     <div className='social-links mt-3'>
                       <a
-                        href='https://www.facebook.com/digipremier1/'
+                        href='https://www.facebook.com/DigiPremierOrg'
                         target='blank'
                       >
                         <FontAwesomeIcon
@@ -75,10 +75,7 @@ const Footer = () => {
                           icon={faInstagram}
                         ></FontAwesomeIcon>
                       </a>
-                      <a
-                        href='https://www.pinterest.com/digipremier/'
-                        target='blank'
-                      >
+                      <a href='' target='blank'>
                         <FontAwesomeIcon
                           className='footer-sicial-icon'
                           icon={faPinterestP}
@@ -197,8 +194,8 @@ const Footer = () => {
                 <div className='col-lg-4 col-md-4 col-sm-12'>
                   <p>
                     <br />
-                    <span className='office-name'>UK Office:</span>
-                    3rd Floor, 244 Edgware Road, London W2 1DS, UK. <br />
+                    <span className='office-name'>UK Office:</span> 3rd Floor,
+                    244 Edgware Road, London W2 1DS, UK. <br />
                     <br />
                     <strong>
                       <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>{' '}
@@ -212,7 +209,7 @@ const Footer = () => {
                   <p>
                     <br />
                     <span className='office-name'>Pakistan Office:</span> 2nd
-                    Floor MB-269, DHA phase 6, Lahore, Pakistan.
+                    Floor, Plaza no 83 Phase 1 Block - H, DHA Lahore
                     <br />
                     <br />
                     <strong>
@@ -220,7 +217,7 @@ const Footer = () => {
                       <FontAwesomeIcon icon={faWhatsapp}></FontAwesomeIcon>
                     </strong>
                     {'   '}
-                    +92 333 0671555
+                    0335 7611888
                   </p>
                 </div>
               </div>
