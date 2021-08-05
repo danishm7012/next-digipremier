@@ -1,10 +1,10 @@
 import Meta from '../Meta'
 
 import { Container } from 'react-bootstrap'
-/* import BlogData from '../../companiesData/BlogsData' */
+import BlogData from '../../companydata/Blogs'
 import Title from '../common/Title'
 import Blog from './Blog'
-const Blogs = ({ blogs }) => {
+const Blogs = () => {
   return (
     <>
       <Title img='/images/Banners/blogs.jpg' />

@@ -218,6 +218,12 @@ const Footer = () => {
                     </strong>
                     {'   '}
                     0335 7611888
+                    <br />
+                    <strong>
+                      <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>{' '}
+                    </strong>
+                    {'   '}
+                    +92 423 2801559
                   </p>
                 </div>
               </div>

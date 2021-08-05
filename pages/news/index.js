@@ -1,9 +1,10 @@
-import Blogs from '../../components/Blogs/Blogs'
-import { server } from '../../config/index'
-const index = ({ blogs }) => {
+/* import Blogs from '../../components/Blogs/Blogs' */
+
+const index = () => {
   return (
     <>
-      <Blogs blogs={blogs} />
+      {/* <Blogs /> */}
+      <h1>Comming Soon</h1>
     </>
   )
 }
