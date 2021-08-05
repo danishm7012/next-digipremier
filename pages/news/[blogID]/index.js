@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+/* import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { Col, Row, Container, Image, Button } from "react-bootstrap";
 import blogs from "../../../companiesData/BlogsData";
@@ -56,3 +56,4 @@ const index = () => {
 };
 
 export default index;
+ */

@@ -1,4 +1,4 @@
-import { Container, Col, Row, Image } from "react-bootstrap";
+/* import { Container, Col, Row, Image } from "react-bootstrap";
 import Link from "next/link";
 import { Blogs } from "../../companydata/blogs";
 
@@ -52,3 +52,4 @@ const Blog = () => {
 };
 
 export default Blog;
+ */

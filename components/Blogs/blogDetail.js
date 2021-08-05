@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+/* import React, { useState, useEffect } from 'react'
 import { Col, Row, Container, Image, Button } from 'react-bootstrap'
 import blogs from '../../companiesData/BlogsData'
 import { Link } from 'react-router-dom'
@@ -56,3 +56,4 @@ const BlogDetail = ({ match }) => {
 }
 
 export default BlogDetail
+ */

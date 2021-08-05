@@ -1,9 +1,9 @@
 import Meta from '../Meta'
 
-import { Container } from 'react-bootstrap'
-import BlogData from '../../companydata/Blogs'
+/* import { Container } from 'react-bootstrap'
+import BlogData from '../../companydata/Blogs' */
 import Title from '../common/Title'
-import Blog from './Blog'
+/* import Blog from './Blog' */
 const Blogs = () => {
   return (
     <>
