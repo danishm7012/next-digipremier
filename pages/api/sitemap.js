@@ -1,5 +1,5 @@
 // import { SitemapStream, streamToPromise } from "sitemap";
-import { getAllPostSlugs } from '../../lib/services'
+import { getAllPostSlugs } from '../../lib/service'
 const { SitemapStream, streamToPromise } = require('sitemap')
 const { Readable } = require('stream')
 
