@@ -1,4 +1,4 @@
-export async function getAllPostSlugs() {
+export default async function getAllPostSlugs() {
   const res = await fetch(`https://cms-digipremier.herokuapp.com/services`)
 
   const services = await res.json()
