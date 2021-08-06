@@ -19,6 +19,13 @@ const Service = ({ service }) => {
 
   return (
     <>
+      <Meta
+        title={service.metaTitle}
+        description={service.metaDescription}
+        keywords={service.metaKeyword}
+        canonical={slug}
+        ogImage={ServiceImg.image}
+      />
       <Row>
         <Col>
           <Image
@@ -31,11 +38,6 @@ const Service = ({ service }) => {
         </Col>
       </Row>
       <div className='section'>
-        <Meta
-          title={service.metaTitle}
-          description={service.metaDescription}
-          keywords={service.metaKeyword}
-        />
         <Container>
           <div className='section-title'>
             <h1>{service.title}</h1>

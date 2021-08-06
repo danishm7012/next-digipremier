@@ -1,14 +1,21 @@
 import Head from 'next/head'
 
-const Meta = ({ title, keywords, description }) => {
+const Meta = ({ title, keywords, description, canonical, ogImage }) => {
   return (
     <Head>
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
-      <meta name='keywords' content={keywords} />
-      <meta name='description' content={description} />
-      <meta charSet='utf-8' />
-      <link rel='icon' href='/favicon.ico' />
       <title>{title}</title>
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords} />
+      <meta property='og:title' content={`${title} - Digipremier`} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={ogImage} />
+      <link rel='canonical' href={`https://www.digipremier.org/${canonical}`} />
+      <meta name='robots' content='index, follow' />
+
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta charSet='utf-8' />
+
+      <link rel='icon' href='/favicon.ico' />
     </Head>
   )
 }
