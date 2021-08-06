@@ -1,5 +1,5 @@
 // import { SitemapStream, streamToPromise } from "sitemap";
-import { getAllPostSlugs } from '../../lib/service'
+import Slugs from '../../lib/Slugs'
 const { SitemapStream, streamToPromise } = require('sitemap')
 const { Readable } = require('stream')
 
@@ -7,7 +7,7 @@ export default async (req, res) => {
   try {
     // An array with your links
     const links = []
-    getAllPostSlugs().map((post) => {
+    Slugs.map((post) => {
       links.push({
         url: `/${post.params.slug}`,
         changefreq: 'daily',
