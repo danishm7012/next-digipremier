@@ -32,4 +32,4 @@ Disallow:
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://www.digipremier.org/sitemap
+Sitemap: https://www.digipremier.org/sitemap.xml

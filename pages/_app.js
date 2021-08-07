@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         rel='stylesheet'
       />
       <link href='./robots.txt' rel='robots' />
+      <link href='./sitemap.xml' rel='sitemap' />
 
       <link href='./vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
 

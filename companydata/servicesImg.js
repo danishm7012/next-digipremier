@@ -89,7 +89,7 @@ const Images = [
   },
   {
     slug: 'fashion-video-ads',
-    image: '/images/services/Fashion-Textile.jpg',
+    image: '/images/services/Fashion-And-Textile-Add.jpg',
   },
   {
     slug: 'short-film-production',

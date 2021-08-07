@@ -1,9 +1,9 @@
-import React from "react";
-import Slider from "react-slick";
-import { Container, Row, Col } from "react-bootstrap";
-import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
-import TestimonialCard from "./testimonials/testimonialCard/index";
-import { TestimonialData } from "../companiesData/TestimonialData";
+import React from 'react'
+import Slider from 'react-slick'
+import { Container, Row, Col } from 'react-bootstrap'
+import { FaQuoteRight, FaQuoteLeft } from 'react-icons/fa'
+import TestimonialCard from './testimonials/testimonialCard/index'
+import { TestimonialData } from '../companiesData/TestimonialData'
 
 const Testimonial = () => {
   var settings = {
@@ -36,21 +36,21 @@ const Testimonial = () => {
       // settings: "unslick"
       // instead of a settings object
     ],
-  };
+  }
   return (
-    <div className="py-5 testimonials" style={{ background: "#000" }}>
+    <div className='py-5 testimonials' style={{ background: '#000' }}>
       <Container>
         <br />
         <br />
-        <div className="testimonials">
-          <h2 className="text-center">Testimonials</h2>
+        <div className='testimonials'>
+          <h2 className='text-center'>Testimonials</h2>
         </div>
         <br />
 
         <Slider {...settings}>
           {TestimonialData.map((Data) => {
             return (
-              <div className="p-2">
+              <div key={Data.id} className='p-2'>
                 <TestimonialCard
                   img={Data.img}
                   details={Data.details}
@@ -59,14 +59,14 @@ const Testimonial = () => {
                   company={Data.company}
                 />
               </div>
-            );
+            )
           })}
         </Slider>
       </Container>
       <br />
       <br />
     </div>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial
