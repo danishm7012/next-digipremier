@@ -2,14 +2,13 @@ export const TeamData = [
   {
     id: '1',
     img: '/images/team/ayaz.jpg',
-    details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of ",
+    details: `Ayaz Ahmad is Digital Marketing Executive at DigiPremier, also recognized as SEO Genius — DigiPremier one of the award-winning, high-end, digital business solution agencies. A keynote speaker, creative trainer, and Google Ads Certified, he is an SEO, SEM, Display Ads, Lead generator, and content marketing specialist.`,
     Name: 'Smith Dcusa',
     desig: 'Co-Founder',
-    facebook: '',
-    linkedin: '',
-    twitter: '',
-    instagram: '',
+    facebook: 'https://www.facebook.com/AyazAhmad01',
+    linkedin: 'https://www.linkedin.com/in/ayazahmad01/',
+    twitter: 'https://twitter.com/meharayazahmad',
+    instagram: 'https://www.instagram.com/ayazahmadmehar/',
   },
   {
     id: '2',
@@ -38,7 +37,7 @@ export const TeamData = [
   {
     id: '4',
     img: '/images/team/naveed.jpg',
-    details: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of`,
+    details: `Naveed Aziz is one of Lahore, Pakistan's leading internet marketers. He is a distinguished keynote lecturer, businessman, SEO specialist. Over 7 years in the fields of SEO, internet and UX, he has been engaged in digital marketing.`,
     Name: 'Ana Richmono',
     desig: 'Creative Leader',
     facebook: '',
