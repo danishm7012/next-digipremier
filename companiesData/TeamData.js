@@ -45,4 +45,15 @@ export const TeamData = [
     twitter: '',
     instagram: '',
   },
+  {
+    id: '5',
+    img: '/images/team/abid.jpeg',
+    details: `Abid javed is one of Lahore, Pakistan's leading internet marketers. He is a distinguished keynote lecturer, businessman, SEO specialist. Over 7 years in the fields of SEO, internet and UX, he has been engaged in digital marketing.`,
+    Name: 'Ana Richmono',
+    desig: 'Creative Leader',
+    facebook: '',
+    linkedin: '',
+    twitter: '',
+    instagram: '',
+  },
 ]

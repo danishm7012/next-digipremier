@@ -18,7 +18,7 @@ const TeamCard = ({ img, Name, desig, details }) => {
         <div className='text text-center'>
           {/* <h2 className="name ">{Name}</h2>
           <p className="desigination"> {desig} </p> */}
-          <p>{details}</p>
+          <p style={{ fontSize: 13 }}>{details}</p>
           <div className='social-links'>
             <ul className='m-0 p-0'>
               <li>
