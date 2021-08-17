@@ -8,7 +8,16 @@ import {
   FaLinkedinIn,
 } from 'react-icons/fa'
 
-const TeamCard = ({ img, Name, desig, details }) => {
+const TeamCard = ({
+  img,
+  Name,
+  desig,
+  details,
+  facebook,
+  twitter,
+  insta,
+  linkedin,
+}) => {
   return (
     <div>
       <div className='team-card'>
@@ -22,22 +31,22 @@ const TeamCard = ({ img, Name, desig, details }) => {
           <div className='social-links'>
             <ul className='m-0 p-0'>
               <li>
-                <a href=''>
+                <a href={facebook}>
                   <FaFacebook />
                 </a>
               </li>
               <li>
-                <a href=''>
+                <a href={twitter}>
                   <FaTwitter />
                 </a>
               </li>
               <li>
-                <a href=''>
+                <a href={insta}>
                   <FaInstagram />
                 </a>
               </li>
               <li>
-                <a href=''>
+                <a href={linkedin}>
                   <FaLinkedinIn />
                 </a>
               </li>

@@ -55,6 +55,10 @@ const OurTeam = () => {
                     Name={Data.Name}
                     desig={Data.desig}
                     details={Data.details}
+                    facebook={Data.facebook}
+                    twitter={Data.twitter}
+                    linkedin={Data.linkedin}
+                    insta={Data.instagram}
                   />
                 </Col>
               )
