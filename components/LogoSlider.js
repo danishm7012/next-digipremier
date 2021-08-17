@@ -51,7 +51,7 @@ const LogoSlider = () => {
         <Slider {...settings}>
           {LogoSliderData.map((Data) => {
             return (
-              <div className='p-2'>
+              <div key={Data.img} className='p-2'>
                 <div className='logo-slider'>
                   <Image src={Data.img} width={250} height={300} alt='Logo 1' />
                 </div>

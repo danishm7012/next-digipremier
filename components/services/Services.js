@@ -13,6 +13,7 @@ const Services = ({ serviceData }) => {
         <Row>
           {serviceData.map((s) => (
             <Service
+              key={s.slug}
               _id={s.slug}
               image={s.image}
               name={s.name}
